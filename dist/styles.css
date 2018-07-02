@@ -1,2 +1,46 @@
-* {
-  color: red; }
+header {
+  background-color: black; }
+  header > img {
+    height: 100px; }
+  header ul {
+    list-style-type: none; }
+    header ul > li {
+      display: inline-block;
+      padding: 5px;
+      color: white;
+      cursor: pointer; }
+      header ul > li:hover {
+        background-color: red;
+        transition: 1s; }
+
+.facebook, .google, .tweeter {
+  background-image: url("http://www.pngmart.com/files/3/Social-Icons-PNG-Pic.png");
+  background-repeat: no-repeat;
+  background-size: 200px;
+  height: 32px;
+  width: 32px;
+  display: inline-block; }
+  .facebook:hover, .google:hover, .tweeter:hover {
+    transform: rotate(360deg);
+    transition: 1s;
+    cursor: pointer; }
+
+.facebook {
+  background-position: -9px -7px; }
+
+.tweeter {
+  background-position: -121px -7px; }
+
+.google {
+  background-position: -46px -7px; }
+
+.search {
+  background-image: url("https://findicons.com/files/icons/2357/dortmund/32/search.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 32px;
+  width: 32px; }
+  .search:hover {
+    transform: rotate(360deg);
+    transition: 1s;
+    cursor: pointer; }
