@@ -245,9 +245,6 @@ footer {
       text-align: center;
       padding-left: 0;
     }
-    & a {
-
-    }
   }
 
   .menu-trigger {
@@ -265,5 +262,20 @@ footer {
 
   .social {
     display: none;
+  }
+}
+
+.tags {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  & > span {
+    color: darkslateblue;
+    font-family: inherit;
+    padding-left: 5px;
+    &:hover {
+      color: red;
+      cursor: pointer;
+    }
   }
 }
