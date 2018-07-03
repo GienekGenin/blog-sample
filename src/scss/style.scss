@@ -1,4 +1,4 @@
-body {
+html, body {
   font-family: Arial, sans-serif;
   max-width: 1200px;
   margin: auto;
@@ -25,8 +25,6 @@ header ul {
 header {
   width: 100%;
   background-color: black;
-  display: grid;
-  grid-template-columns: auto auto;
 }
 header li {
   display: inline-block;
@@ -108,4 +106,23 @@ header a:hover {
     transition: 1s;
     cursor: pointer;
   }
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.content{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+article > img {
+  width: 150px;
 }
