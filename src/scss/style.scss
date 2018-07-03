@@ -28,10 +28,10 @@ html, body {
 }
 
 main {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 10px;
+  align-content: center;
 }
 
 article {
@@ -46,7 +46,9 @@ article {
       transition: 1s;
     }
   }
-  margin: auto;
+  max-width: 200px;
+  min-width: 150px;
+  margin: 10px;
 }
 
 aside {
@@ -147,11 +149,36 @@ button {
   }
 }
 
+.tags {
+  width: 100%;
+  & > span {
+    color: darkslateblue;
+    font-family: inherit;
+    padding-left: 5px;
+    &:hover {
+      color: red;
+      cursor: pointer;
+      transition: 1s;
+    }
+  }
+}
+
 // footer
 footer {
   width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
   background-color: black;
   color: white;
+  & .logo{
+    height: 60px;
+  }
+  & > span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-self: center;
+  }
 }
 
 @media only screen and (max-width: 780px) {
@@ -187,7 +214,7 @@ footer {
     display: inline-block;
   }
 
-  #logo {
+  .logo {
     display: inline-block;
     height: 100px;
   }
@@ -198,19 +225,5 @@ footer {
 
   .social {
     display: none;
-  }
-}
-
-.tags {
-  width: 100%;
-  & > span {
-    color: darkslateblue;
-    font-family: inherit;
-    padding-left: 5px;
-    &:hover {
-      color: red;
-      cursor: pointer;
-      transition: 1s;
-    }
   }
 }
