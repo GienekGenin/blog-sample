@@ -1,24 +1,11 @@
-header {
-  background-color: black; }
-  header > img {
-    height: 100px; }
-  header ul {
-    list-style-type: none; }
-    header ul > li {
-      display: inline-block;
-      padding: 5px;
-      color: white;
-      cursor: pointer; }
-      header ul > li:hover {
-        background-color: red;
-        transition: 1s; }
-
 .facebook, .google, .tweeter {
   background-image: url("http://www.pngmart.com/files/3/Social-Icons-PNG-Pic.png");
   background-repeat: no-repeat;
   background-size: 200px;
-  height: 32px;
-  width: 32px;
+  justify-self: center;
+  margin: 10px;
+  height: 31px;
+  width: 31px;
   display: inline-block; }
   .facebook:hover, .google:hover, .tweeter:hover {
     transform: rotate(360deg);
@@ -38,9 +25,242 @@ header {
   background-image: url("https://findicons.com/files/icons/2357/dortmund/32/search.png");
   background-repeat: no-repeat;
   display: inline-block;
+  align-self: center;
+  justify-self: center;
   height: 32px;
-  width: 32px; }
+  width: 32px;
+  grid-area: 1/4; }
   .search:hover {
     transform: rotate(360deg);
     transition: 1s;
     cursor: pointer; }
+
+.search-hidden {
+  background-image: url("https://findicons.com/files/icons/2357/dortmund/32/search.png");
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+  display: none; }
+  .search-hidden:hover {
+    transform: rotate(360deg);
+    transition: 1s;
+    cursor: pointer; }
+
+.menu-trigger {
+  text-align: center;
+  display: none; }
+
+.logo {
+  display: inline-block;
+  height: 110px; }
+
+.social {
+  align-self: center;
+  justify-self: center; }
+
+header {
+  width: 100%;
+  background-color: black;
+  display: grid;
+  grid-template-columns: auto auto; }
+  header ul {
+    padding: 0;
+    margin: 0;
+    align-self: center;
+    text-align: center; }
+  header li {
+    align-self: center;
+    padding-left: 5px;
+    display: inline-block; }
+    header li :hover {
+      text-decoration: underline;
+      background-color: #F11E22;
+      color: aquamarine;
+      transition: 1s; }
+  header a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #F8ECC2; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  font-family: Arial, sans-serif; }
+
+.container {
+  padding: 0;
+  margin: auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-rows: auto auto auto; }
+
+.content {
+  display: grid;
+  grid-template-columns: 80% 20%; }
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  align-content: center;
+  justify-content: center; }
+
+article {
+  max-width: 200px;
+  min-width: 150px;
+  margin: 10px; }
+  article > img {
+    width: 150px; }
+    article > img:hover {
+      -webkit-transform: scale(1.5);
+      /* Safari and Chrome */
+      -moz-transform: scale(1.5);
+      /* Firefox */
+      -ms-transform: scale(1.5);
+      /* IE 9 */
+      -o-transform: scale(1.5);
+      /* Opera */
+      transform: scale(1.5);
+      transition: 1s; }
+  article span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+aside {
+  width: 100%;
+  padding-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: start; }
+  aside img {
+    width: 70px;
+    height: 70px;
+    align-self: start;
+    border-radius: 50px; }
+  aside input {
+    width: 100%; }
+
+.name {
+  color: red;
+  font-family: fantasy; }
+
+#author {
+  display: grid;
+  width: 100%; }
+  #author .description {
+    font-family: Bahnschrift;
+    color: black; }
+
+.subscribe {
+  width: 100%; }
+
+.info {
+  display: grid;
+  padding-left: 10px; }
+  .info span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+.comments {
+  width: 100%;
+  display: grid; }
+
+.comment-body {
+  display: grid;
+  grid-template-columns: 70px 1fr; }
+
+.comment {
+  font-family: cursive; }
+
+.menu-items {
+  display: grid; }
+
+button {
+  height: 30px;
+  width: 100%;
+  background-color: #F11E22;
+  border-radius: 5px;
+  border: none; }
+  button:hover {
+    cursor: pointer;
+    background-color: red;
+    transition: 1s; }
+
+.search-comment {
+  padding-top: 5px;
+  width: 100%;
+  display: flex; }
+  .search-comment input {
+    width: 80%; }
+  .search-comment button {
+    width: 20%;
+    background-color: wheat;
+    background-image: url("https://findicons.com/files/icons/2357/dortmund/32/search.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }
+    .search-comment button:hover {
+      background-color: #F11E22; }
+
+.tags {
+  width: 100%; }
+  .tags > span {
+    color: darkslateblue;
+    font-family: inherit;
+    padding-left: 5px; }
+    .tags > span:hover {
+      color: red;
+      cursor: pointer;
+      transition: 1s; }
+
+footer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: black;
+  color: white; }
+  footer .logo {
+    height: 60px; }
+  footer > span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-self: center;
+    text-align: center; }
+
+@media only screen and (max-width: 780px) {
+  .search-comment input {
+    width: 90%; }
+  .search-comment button {
+    width: 10%;
+    min-width: 30px; }
+  .search-hidden {
+    display: inline-block; }
+  .content {
+    grid-template-columns: 100%; }
+  header {
+    display: block; }
+    header ul {
+      display: none;
+      padding-left: 0; }
+    header li {
+      display: block;
+      text-align: center;
+      padding-left: 0; }
+  .menu-trigger {
+    display: inline-block; }
+  .logo {
+    display: inline-block;
+    height: 100px; }
+  #hamburger {
+    height: 20px; }
+  .social {
+    display: none; } }
