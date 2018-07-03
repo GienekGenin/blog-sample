@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
@@ -141,6 +143,7 @@ aside {
   & img {
     width: 70px;
     height: 70px;
+    align-self: start;
   }
   display: flex;
   flex-wrap: wrap;
@@ -151,8 +154,7 @@ aside {
 }
 
 #author {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   & .name {
     font-family: fantasy;
     color: red;
@@ -168,8 +170,19 @@ aside {
 }
 
 .comments {
+  width: 100%;
   display: grid;
-  grid-template-columns: 70px 1fr;
+}
+
+.comment {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: 70px 150px
+}
+
+.info {
+  display: grid;
 }
 
 .menu-items {
@@ -269,6 +282,7 @@ footer {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   & > span {
     color: darkslateblue;
     font-family: inherit;
@@ -276,6 +290,7 @@ footer {
     &:hover {
       color: red;
       cursor: pointer;
+      transition: 1s;
     }
   }
 }
