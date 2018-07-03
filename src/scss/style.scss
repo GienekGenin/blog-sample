@@ -1,22 +1,73 @@
-@import './_variables.scss';
+body {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: auto;
+}
+.menu-trigger {
+  text-align: center;
+  display: none;
+}
+
+#logo {
+  display: inline-block;
+  height: 100px;
+}
+
+.social{
+  display: inline-block;
+  color: white;
+}
+
+header ul {
+  display: inline-block;
+}
 
 header {
+  width: 100%;
   background-color: black;
-  & > img {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+header li {
+  display: inline-block;
+}
+header a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #F8ECC2;
+}
+header a:hover {
+  background-color: red;
+}
+
+@media screen and (max-width:780px) {
+  header ul {
+    display: none;
+    padding-left: 0;
+  }
+  header li {
+    display: block;
+    text-align: center;
+  }
+  header a {
+
+  }
+  .menu-trigger {
+    display: inline-block;
+  }
+
+  #logo {
+    display: inline-block;
     height: 100px;
   }
-  & ul {
-    list-style-type: none;
-    > li {
-      display: inline-block;
-      padding: 5px;
-      color: white;
-      cursor: pointer;
-      &:hover{
-        background-color: red;
-        transition: 1s;
-      }
-    }
+
+  #hamburger {
+    height: 20px;
+  }
+
+  .social{
+    display: none;
   }
 }
 
