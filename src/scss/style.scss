@@ -28,24 +28,24 @@ header {
   background-color: black;
   display: grid;
   grid-template-columns: auto auto;
-  & ul{
+  & ul {
     padding: 0;
     margin: 0;
     align-self: center;
     text-align: center;
   }
-  & li{
+  & li {
     align-self: center;
     padding-left: 5px;
     display: inline-block;
-    :hover{
+    :hover {
       text-decoration: underline;
       background-color: #F11E22;
       color: aquamarine;
       transition: 1s;
     }
   }
-  & a{
+  & a {
     display: block;
     text-decoration: none;
     text-align: center;
@@ -97,7 +97,7 @@ header {
   grid-area: 1/4;
 }
 
-.search-hidden{
+.search-hidden {
   background-image: url('https://findicons.com/files/icons/2357/dortmund/32/search.png');
   background-repeat: no-repeat;
   height: 32px;
@@ -129,22 +129,42 @@ main {
 }
 
 article {
-  & > img{
+  & > img {
     width: 150px;
   }
   margin: auto;
 }
 
-footer {
-  width: 100%;
-  background-color: black;
-  color: white;
-}
-
 aside {
+  width: 100%;
+  padding-top: 5px;
   & img {
     width: 70px;
+    height: 70px;
   }
+  display: flex;
+  flex-wrap: wrap;
+  align-self: start;
+  & input {
+    width: 100%;
+  }
+}
+
+#author {
+  display: flex;
+  flex-wrap: wrap;
+  & .name {
+    font-family: fantasy;
+    color: red;
+  }
+  & .description {
+    font-family: Bahnschrift;
+    color: black;
+  }
+}
+
+.subscribe {
+  width: 100%;
 }
 
 .comments {
@@ -156,8 +176,59 @@ aside {
   display: grid;
 }
 
+button {
+  height: 30px;
+  width: 100%;
+  background-color: #F11E22;
+  border-radius: 5px;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    background-color: red;
+    transition: 1s;
+  }
+}
+
+.search-comment {
+  padding-top: 5px;
+  width: 100%;
+  display: flex;
+  & input {
+    width: 80%;
+  }
+  & button {
+    width: 20%;
+    background-color: wheat;
+    background-image: url('https://findicons.com/files/icons/2357/dortmund/32/search.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    &:hover {
+      background-color: #F11E22;
+    }
+  }
+}
+
+// footer
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
 @media only screen and (max-width: 780px) {
-  .search-hidden{
+  .search-comment {
+    & input {
+      width: 90%;
+    }
+    & button {
+      width: 10%;
+      min-width: 30px;
+    }
+  }
+  .search-hidden {
     display: inline-block;
   }
   .content {
@@ -165,16 +236,16 @@ aside {
   }
   header {
     display: block;
-    & ul{
+    & ul {
       display: none;
       padding-left: 0;
     }
-    & li{
+    & li {
       display: block;
       text-align: center;
       padding-left: 0;
     }
-    & a{
+    & a {
 
     }
   }
