@@ -1,0 +1,44 @@
+.menu-trigger {
+  text-align: center;
+  display: none;
+}
+
+.logo {
+  display: inline-block;
+  height: 110px;
+}
+
+.social {
+  align-self: center;
+  justify-self: center;
+}
+
+header {
+  width: 100%;
+  background-color: black;
+  display: grid;
+  grid-template-columns: auto auto;
+  & ul {
+    padding: 0;
+    margin: 0;
+    align-self: center;
+    text-align: center;
+  }
+  & li {
+    align-self: center;
+    padding-left: 5px;
+    display: inline-block;
+    :hover {
+      text-decoration: underline;
+      background-color: #F11E22;
+      color: aquamarine;
+      transition: 1s;
+    }
+  }
+  & a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #F8ECC2;
+  }
+}

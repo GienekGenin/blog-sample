@@ -1,0 +1,57 @@
+// Social icons
+.facebook, .google, .tweeter {
+  background-image: url('http://www.pngmart.com/files/3/Social-Icons-PNG-Pic.png');
+  background-repeat: no-repeat;
+  background-size: 200px;
+  justify-self: center;
+  margin: 10px;
+  height: 31px;
+  width: 31px;
+  display: inline-block;
+  &:hover {
+    transform: rotate(360deg);
+    transition: 1s;
+    cursor: pointer;
+  }
+}
+
+.facebook {
+  background-position: -9px -7px;
+}
+
+.tweeter {
+  background-position: -121px -7px;
+}
+
+.google {
+  background-position: -46px -7px;
+}
+
+.search {
+  background-image: url('https://findicons.com/files/icons/2357/dortmund/32/search.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  align-self: center;
+  justify-self: center;
+  height: 32px;
+  width: 32px;
+  &:hover {
+    transform: rotate(360deg);
+    transition: 1s;
+    cursor: pointer;
+  }
+  grid-area: 1/4;
+}
+
+.search-hidden {
+  background-image: url('https://findicons.com/files/icons/2357/dortmund/32/search.png');
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+  &:hover {
+    transform: rotate(360deg);
+    transition: 1s;
+    cursor: pointer;
+  }
+  display: none;
+}
