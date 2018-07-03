@@ -20,8 +20,8 @@ html, body {
 }
 
 .social {
-  display: inline-block;
-  color: white;
+  display: grid;
+  align-self: center;
 }
 
 header {
@@ -32,19 +32,24 @@ header {
   & ul{
     padding: 0;
     margin: 0;
-    display: inline-block;
+    align-self: center;
+    text-align: center;
   }
   & li{
+    align-self: center;
+    padding-left: 5px;
     display: inline-block;
+    :hover{
+      text-decoration: underline;
+      color: aquamarine;
+      transition: 1s;
+    }
   }
   & a{
     display: block;
     text-decoration: none;
-    padding: 20px;
+    text-align: center;
     color: #F8ECC2;
-    &:hover{
-      background-color: red;
-    }
   }
 }
 
@@ -86,6 +91,20 @@ header {
     transition: 1s;
     cursor: pointer;
   }
+  grid-area: 1/4;
+}
+
+.search-hidden{
+  background-image: url('https://findicons.com/files/icons/2357/dortmund/32/search.png');
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+  &:hover {
+    transform: rotate(360deg);
+    transition: 1s;
+    cursor: pointer;
+  }
+  display: none;
 }
 
 //content
@@ -135,6 +154,9 @@ aside {
 }
 
 @media only screen and (max-width: 780px) {
+  .search-hidden{
+    display: inline-block;
+  }
   .content {
     grid-template-columns: 100%;
   }
