@@ -125,8 +125,12 @@ header a:hover {
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   justify-content: center;
+}
+
+article{
+  margin: auto;
 }
 
 article > img {
@@ -137,6 +141,17 @@ footer {
   width: 100%;
   background-color: black;
   color: white;
+}
+
+aside{
+  & img {
+    width: 70px;
+  }
+}
+
+.comments{
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
 }
 
 @media only screen and (max-width: 780px) {
