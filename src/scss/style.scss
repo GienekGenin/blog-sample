@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 html, body {
   font-family: Arial, sans-serif;
   max-width: 1200px;
@@ -109,20 +113,34 @@ header a:hover {
 }
 
 .container {
+  padding: 0;
   display: grid;
   grid-template-rows: auto auto auto;
 }
 
 .content{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 80% 20%;
 }
 
 main {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fill, 200px);
+  justify-content: center;
 }
 
 article > img {
   width: 150px;
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (max-width: 780px) {
+  .content{
+    grid-template-columns: 100%;
+  }
 }
