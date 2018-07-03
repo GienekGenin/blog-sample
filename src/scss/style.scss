@@ -20,7 +20,6 @@ html, body {
 }
 
 .social {
-  display: grid;
   align-self: center;
 }
 
@@ -41,6 +40,7 @@ header {
     display: inline-block;
     :hover{
       text-decoration: underline;
+      background-color: #F11E22;
       color: aquamarine;
       transition: 1s;
     }
@@ -58,6 +58,7 @@ header {
   background-image: url('http://www.pngmart.com/files/3/Social-Icons-PNG-Pic.png');
   background-repeat: no-repeat;
   background-size: 200px;
+  justify-self: center;
   height: 32px;
   width: 32px;
   display: inline-block;
@@ -84,6 +85,8 @@ header {
   background-image: url('https://findicons.com/files/icons/2357/dortmund/32/search.png');
   background-repeat: no-repeat;
   display: inline-block;
+  align-self: center;
+  justify-self: center;
   height: 32px;
   width: 32px;
   &:hover {
@@ -169,6 +172,7 @@ aside {
     & li{
       display: block;
       text-align: center;
+      padding-left: 0;
     }
     & a{
 
