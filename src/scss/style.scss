@@ -1,6 +1,7 @@
 @import "icons";
 //hamburger menu
 @import "header";
+@import "variables";
 
 * {
   box-sizing: border-box;
@@ -10,13 +11,13 @@
 
 html, body {
   font-family: Arial, sans-serif;
-  max-width: 1200px;
-  margin: auto;
 }
 
 //content
 .container {
   padding: 0;
+  margin: auto;
+  max-width: 1200px;
   display: grid;
   grid-template-rows: auto auto auto;
 }
@@ -30,6 +31,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   justify-content: center;
+  margin-top: 10px;
 }
 
 article {
@@ -65,8 +67,8 @@ aside {
 }
 
 .name {
-  font-family: fantasy;
   color: red;
+  font-family: fantasy;
 }
 
 #author {
@@ -83,8 +85,8 @@ aside {
 }
 
 .info {
-  padding-left: 10px;
   display: grid;
+  padding-left: 10px;
   & span {
     white-space: nowrap;
     overflow: hidden;
@@ -113,7 +115,7 @@ aside {
 button {
   height: 30px;
   width: 100%;
-  background-color: #F11E22;
+  background-color: $marvel-color;
   border-radius: 5px;
   border: none;
   &:hover {
@@ -140,7 +142,7 @@ button {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     &:hover {
-      background-color: #F11E22;
+      background-color: $marvel-color;
     }
   }
 }
