@@ -46,6 +46,7 @@ aside {
     width: 70px;
     height: 70px;
     align-self: start;
+    border-radius: 50px;
   }
   display: flex;
   flex-wrap: wrap;
@@ -55,13 +56,14 @@ aside {
   }
 }
 
+.name {
+  font-family: fantasy;
+  color: red;
+}
+
 #author {
   display: grid;
   width: 100%;
-  & .name {
-    font-family: fantasy;
-    color: red;
-  }
   & .description {
     font-family: Bahnschrift;
     color: black;
@@ -72,19 +74,28 @@ aside {
   width: 100%;
 }
 
+.info {
+  padding-left: 10px;
+  display: grid;
+  & span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 .comments {
   width: 100%;
   display: grid;
 }
 
-.comment {
-  width: 100%;
+.comment-body {
   display: grid;
   grid-template-columns: 70px 1fr;
 }
 
-.info {
-  display: grid;
+.comment{
+  font-family: cursive;
 }
 
 .menu-items {
