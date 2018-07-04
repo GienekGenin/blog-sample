@@ -285,6 +285,7 @@ html, body {
   grid-template-rows: auto auto auto; }
 
 .content {
+  max-width: 1200px;
   position: absolute;
   z-index: -1;
   margin-top: 120px;
