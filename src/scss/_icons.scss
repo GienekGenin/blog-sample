@@ -4,7 +4,6 @@
   background-repeat: no-repeat;
   background-size: 200px;
   justify-self: center;
-  margin: 10px;
   height: 31px;
   width: 31px;
   display: inline-block;
@@ -15,18 +14,22 @@
   }
 }
 
+// facebook icon
 .facebook {
   background-position: -9px -7px;
 }
 
+// tweeter icon
 .tweeter {
   background-position: -121px -7px;
 }
 
+// google icon
 .google {
   background-position: -46px -7px;
 }
 
+// search icon
 .search {
   background-image: url('https://findicons.com/files/icons/2357/dortmund/32/search.png');
   background-repeat: no-repeat;
@@ -40,7 +43,6 @@
     transition: 1s;
     cursor: pointer;
   }
-  grid-area: 1/4;
 }
 
 .search-hidden {

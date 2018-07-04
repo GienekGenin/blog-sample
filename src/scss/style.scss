@@ -1,6 +1,7 @@
 @import "icons";
-//hamburger menu
 @import "header";
+@import "main";
+@import "aside";
 @import "variables";
 
 * {
@@ -11,9 +12,10 @@
 
 html, body {
   font-family: Arial, sans-serif;
+  z-index: 0;
 }
 
-//content
+// all content in this container
 .container {
   padding: 0;
   margin: auto;
@@ -22,107 +24,20 @@ html, body {
   grid-template-rows: auto auto auto;
 }
 
+// main and aside tags
 .content {
+  position: absolute;
+  z-index: -1;
+  margin-top: 120px;
   display: grid;
   grid-template-columns: 80% 20%;
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 10px;
-  align-content: center;
-  justify-content: center;
-}
-
-article {
-  & > img {
-    width: 150px;
-    &:hover {
-      -webkit-transform:scale(1.5); /* Safari and Chrome */
-      -moz-transform:scale(1.5); /* Firefox */
-      -ms-transform:scale(1.5); /* IE 9 */
-      -o-transform:scale(1.5); /* Opera */
-      transform:scale(1.5);
-      transition: 1s;
-    }
-  }
-  & span{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  max-width: 200px;
-  min-width: 150px;
-  margin: 10px;
-}
-
-aside {
-  width: 100%;
-  padding-top: 5px;
-  & img {
-    width: 70px;
-    height: 70px;
-    align-self: start;
-    border-radius: 50px;
-  }
-  display: flex;
-  flex-wrap: wrap;
-  align-self: start;
-  & input {
-    width: 100%;
-  }
-}
-
-.name {
-  color: red;
-  font-family: fantasy;
-}
-
-#author {
-  display: grid;
-  width: 100%;
-  & .description {
-    font-family: Bahnschrift;
-    color: black;
-  }
-}
-
-.subscribe {
-  width: 100%;
-}
-
-.info {
-  display: grid;
-  padding-left: 10px;
-  & span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-.comments {
-  width: 100%;
-  display: grid;
-}
-
-.comment-body {
-  display: grid;
-  grid-template-columns: 70px 1fr;
-}
-
-.comment{
-  font-family: cursive;
-}
-
-.menu-items {
-  display: grid;
-}
-
+// main button styling
 button {
   height: 30px;
   width: 100%;
+  color: wheat;
   background-color: $marvel-color;
   border-radius: 5px;
   border: none;
@@ -133,53 +48,18 @@ button {
   }
 }
 
-.search-comment {
-  padding-top: 5px;
-  width: 100%;
-  display: flex;
-  & input {
-    width: 80%;
-  }
-  & button {
-    width: 20%;
-    background-color: wheat;
-    background-image: url('https://findicons.com/files/icons/2357/dortmund/32/search.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 28px;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    &:hover {
-      background-color: $marvel-color;
-    }
-  }
-}
-
-.tags {
-  width: 100%;
-  & > span {
-    color: darkslateblue;
-    font-family: inherit;
-    padding-left: 5px;
-    &:hover {
-      color: red;
-      cursor: pointer;
-      transition: 1s;
-    }
-  }
-}
-
 // footer
 footer {
   width: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
+  grid-column: 1 / span 2;
   background-color: black;
   color: white;
-  & .logo{
+  & .logo {
     height: 60px;
   }
-  & > span{
+  & > span {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -189,7 +69,8 @@ footer {
 }
 
 @media only screen and (max-width: 780px) {
-  .search-comment {
+  // search box for comments
+  .search-comment-menu {
     & input {
       width: 90%;
     }
@@ -198,38 +79,14 @@ footer {
       min-width: 30px;
     }
   }
-  .search-hidden {
-    display: inline-block;
-  }
+
+  //main content will take hole place
+  //aside goes under main
   .content {
     grid-template-columns: 100%;
   }
-  header {
-    display: block;
-    & ul {
-      display: none;
-      padding-left: 0;
-    }
-    & li {
-      display: block;
-      text-align: center;
-      padding-left: 0;
-    }
-  }
 
-  .menu-trigger {
-    display: inline-block;
-  }
-
-  .logo {
-    display: inline-block;
-    height: 100px;
-  }
-
-  #hamburger {
-    height: 20px;
-  }
-
+  // hide social icons in footer
   .social {
     display: none;
   }
