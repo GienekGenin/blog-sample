@@ -1,0 +1,31 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  align-content: center;
+  justify-content: center;
+}
+
+article {
+  & > img {
+    width: 100%;
+    height: 50%;
+    &:hover {
+      -webkit-transform: scale(1.5); /* Safari and Chrome */
+      -moz-transform: scale(1.5); /* Firefox */
+      -ms-transform: scale(1.5); /* IE 9 */
+      -o-transform: scale(1.5); /* Opera */
+      transform: scale(1.5);
+      transition: 1s;
+    }
+  }
+  & span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  max-width: 200px;
+  min-width: 150px;
+  margin: 10px;
+  margin-bottom: 30px;
+}
