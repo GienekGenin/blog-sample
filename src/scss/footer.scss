@@ -5,9 +5,11 @@ footer {
   grid-column: 1 / span 2;
   background-color: black;
   color: white;
+  // another marvel logo
   & .logo {
     height: 60px;
   }
+  // copyright span
   & > span {
     white-space: nowrap;
     overflow: hidden;

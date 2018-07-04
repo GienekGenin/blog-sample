@@ -10,18 +10,26 @@ main {
 }
 
 article {
+  max-width: 200px;
+  min-width: 150px;
+  margin: 10px;
+  margin-bottom: 30px;
+  // show text on mouse over cards
   &:hover {
     span, h3{
       overflow: visible;
       white-space: normal;
     }
   }
+  // card's title
   & .title {
     font-family: 'Encode Sans Condensed', sans-serif;
   }
+  // card's text
   & span{
     font-family: 'Open Sans', sans-serif;
   }
+  // hide text on resizing
   & h3, & span {
     white-space: nowrap;
     overflow: hidden;
@@ -29,6 +37,7 @@ article {
     display: block;
 
   }
+  // card's img
   & > img {
     width: 100%;
     height: 50%;
@@ -41,20 +50,10 @@ article {
       transition: 1s;
     }
   }
-
-  max-width: 200px;
-  min-width: 150px;
-  margin: 10px;
-  margin-bottom: 30px;
   & .reviews {
-    justify-items: flex-start;
-    & img {
-      margin-left: 3px;
-      align-self: center;
-      width: 15px;
-      height: 15px;
-    }
     display: grid;
+    justify-items: flex-start;
+    // time of post creation
     & .time {
       grid-column: 1 / span 2;
     }
@@ -67,6 +66,13 @@ article {
     & .rating {
       display: flex;
       justify-content: start;
+    }
+    // like and comment icons
+    & img {
+      margin-left: 3px;
+      align-self: center;
+      width: 15px;
+      height: 15px;
     }
   }
 }

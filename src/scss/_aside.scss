@@ -2,6 +2,9 @@
 
 aside {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: start;
   padding-top: 5px;
   padding-right: 10px;
   padding-left: 10px;
@@ -12,9 +15,6 @@ aside {
     align-self: start;
     border-radius: 50px;
   }
-  display: flex;
-  flex-wrap: wrap;
-  align-self: start;
   // subscribe block
   & input {
     width: 100%;

@@ -50,6 +50,7 @@
   justify-self: center;
   height: 32px;
   width: 32px;
+  // rotate icon 360 on mouse over
   &:hover {
     transform: rotate(360deg);
     transition: 1s;
@@ -57,6 +58,7 @@
   }
 }
 
+// hidden minimized search
 .search-hidden {
   background-image: url('https://findicons.com/files/icons/2357/dortmund/32/search.png');
   background-repeat: no-repeat;

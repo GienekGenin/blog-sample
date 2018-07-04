@@ -105,12 +105,11 @@ header {
     margin-left: -3px;
     background-image: url("https://findicons.com/files/icons/2357/dortmund/32/search.png");
     background-repeat: no-repeat; }
-
-.search-box {
-  display: flex;
-  align-self: center;
-  justify-content: flex-end;
-  padding-right: 40px; }
+  .menu-items .search-box {
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    padding-right: 40px; }
 
 @media only screen and (max-width: 780px) {
   header {
@@ -184,13 +183,8 @@ article {
       transform: scale(1.5);
       transition: 1s; }
   article .reviews {
-    justify-items: flex-start;
-    display: grid; }
-    article .reviews img {
-      margin-left: 3px;
-      align-self: center;
-      width: 15px;
-      height: 15px; }
+    display: grid;
+    justify-items: flex-start; }
     article .reviews .time {
       grid-column: 1 / span 2; }
     article .reviews .review-box {
@@ -200,15 +194,20 @@ article {
     article .reviews .rating {
       display: flex;
       justify-content: start; }
+    article .reviews img {
+      margin-left: 3px;
+      align-self: center;
+      width: 15px;
+      height: 15px; }
 
 aside {
   width: 100%;
-  padding-top: 5px;
-  padding-right: 10px;
-  padding-left: 10px;
   display: flex;
   flex-wrap: wrap;
-  align-self: start; }
+  align-self: start;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-left: 10px; }
   aside img {
     width: 70px;
     height: 70px;
