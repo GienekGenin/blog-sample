@@ -127,8 +127,9 @@ header {
       display: block;
       text-align: center;
       padding-left: 0; }
-      header li:hover {
-        background-color: #F11E22; }
+      header li :hover {
+        background-color: #F11E22;
+        color: wheat; }
   .menu-trigger {
     display: flex;
     align-self: center;
