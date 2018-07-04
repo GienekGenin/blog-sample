@@ -3,7 +3,7 @@ import './scss/style.scss';
 
 $(document).ready(function(){
     $('.menu-trigger').click(function(){
-        $('header ul').slideToggle(780);
+        $('header ul').slideToggle(1000);
     });
     $(window).resize(function(){
         if ($(window).width() > 780 ) {

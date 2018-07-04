@@ -1,5 +1,4 @@
 @import "icons";
-//hamburger menu
 @import "header";
 @import "variables";
 
@@ -14,7 +13,7 @@ html, body {
   z-index: 0;
 }
 
-//content
+// all content in this container
 .container {
   padding: 0;
   margin: auto;
@@ -23,6 +22,7 @@ html, body {
   grid-template-rows: auto auto auto;
 }
 
+// main and aside tags
 .content {
   display: grid;
   grid-template-columns: 80% 20%;
@@ -103,22 +103,23 @@ aside {
   }
 }
 
-.comments {
+.comment-box {
   width: 100%;
   display: grid;
 }
 
+// comments box
 .comment-body {
   display: grid;
   grid-template-columns: 70px 1fr;
 }
 
+// users comments
 .comment {
   font-family: cursive;
 }
 
-
-
+// main button styling
 button {
   height: 30px;
   width: 100%;
@@ -132,7 +133,8 @@ button {
   }
 }
 
-.search-comment {
+// search box for comments
+.search-comment-menu {
   padding-top: 5px;
   width: 100%;
   display: flex;
@@ -154,6 +156,7 @@ button {
   }
 }
 
+// tags block
 .tags {
   width: 100%;
   & > span {
@@ -188,7 +191,8 @@ footer {
 }
 
 @media only screen and (max-width: 780px) {
-  .search-comment {
+  // search box for comments
+  .search-comment-menu {
     & input {
       width: 90%;
     }
@@ -197,27 +201,14 @@ footer {
       min-width: 30px;
     }
   }
-  .search-hidden {
-    display: inline-block;
-  }
+
+  //main content will take hole place
+  //aside goes under main
   .content {
     grid-template-columns: 100%;
   }
 
-
-  .menu-trigger {
-    display: inline-block;
-  }
-
-  .logo {
-    display: inline-block;
-    height: 100px;
-  }
-
-  #hamburger {
-    height: 20px;
-  }
-
+  // hide social icons in footer
   .social {
     display: none;
   }

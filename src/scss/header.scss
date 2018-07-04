@@ -1,29 +1,17 @@
-.menu-trigger {
-  text-align: center;
-  display: none;
-}
-
-.logo {
-  display: inline-block;
-  height: 110px;
-}
-
-.social {
-  display: flex;
-  align-self: center;
-  justify-self: center;
-}
+@import "variables";
 
 header {
-  width: 100%;
+  & .logo{
+    height: 110px;
+  }
   background-color: black;
   display: grid;
   grid-template-columns: auto auto;
   & ul {
-    padding: 0;
     margin: 0;
-    align-self: center;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
   }
   & li {
     align-self: center;
@@ -31,7 +19,6 @@ header {
     display: inline-block;
     :hover {
       text-decoration: underline;
-      background-color: #F11E22;
       color: aquamarine;
       transition: 1s;
     }
@@ -44,13 +31,26 @@ header {
   }
 }
 
+// Hamburger menu trigger
+.menu-trigger {
+  display: none;
+}
+
+//Social icons block
+.social {
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+}
+
+// Item container - needed for grid system
 .menu-items-box {
   display: grid;
 }
 
+// Social icons, input and button
 .menu-items {
   display: grid;
-  grid-template-rows: auto;
   grid-template-columns: auto auto;
   & input {
     width: 150px;
@@ -65,6 +65,7 @@ header {
   }
 }
 
+// Search items container
 .search-box {
   display: flex;
   align-self: center;
@@ -73,44 +74,56 @@ header {
 }
 
 @media only screen and (max-width: 780px) {
-  .menu-items{
-    display: none;
+
+  header {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: auto;
+    & .logo{
+      display: flex;
+      align-self: center;
+      justify-self: center;
+    }
+    & ul {
+      display: none;
+      margin-right: 0;
+    }
+    & li {
+      display: block;
+      text-align: center;
+      padding-left: 0;
+      &:hover{
+        background-color: $marvel-color;
+      }
+    }
   }
 
+  //center hamburger box
   .menu-trigger{
     display: flex;
     align-self: center;
     justify-content: center;
   }
 
-  .logo{
-    display: flex;
-    align-self: center;
-    justify-self: center;
+  // ul will take place of 3 columns
+  .menu-items-box{
+    grid-column: 1 / span 3;
   }
 
+  // hide unnecessary icons
+  .menu-items{
+    display: none;
+  }
+
+  // hidden search icon
   .search-hidden{
     display: flex;
     align-self: center;
     justify-self: center;
   }
 
-  .menu-items-box{
-    grid-column: 1 / span 3;
-  }
-
-  header {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    height: auto;
-    & ul {
-      display: none;
-      padding-left: 0;
-    }
-    & li {
-      display: block;
-      text-align: center;
-      padding-left: 0;
-    }
+  // hamburger icon
+  #hamburger {
+    height: 35px;
   }
 }
