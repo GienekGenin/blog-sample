@@ -39,15 +39,15 @@ article {
   & > img {
     width: 150px;
     &:hover {
-      -webkit-transform:scale(1.5); /* Safari and Chrome */
-      -moz-transform:scale(1.5); /* Firefox */
-      -ms-transform:scale(1.5); /* IE 9 */
-      -o-transform:scale(1.5); /* Opera */
-      transform:scale(1.5);
+      -webkit-transform: scale(1.5); /* Safari and Chrome */
+      -moz-transform: scale(1.5); /* Firefox */
+      -ms-transform: scale(1.5); /* IE 9 */
+      -o-transform: scale(1.5); /* Opera */
+      transform: scale(1.5);
       transition: 1s;
     }
   }
-  & span{
+  & span {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -112,13 +112,11 @@ aside {
   grid-template-columns: 70px 1fr;
 }
 
-.comment{
+.comment {
   font-family: cursive;
 }
 
-.menu-items {
-  display: grid;
-}
+
 
 button {
   height: 30px;
@@ -176,10 +174,10 @@ footer {
   grid-template-columns: auto auto auto;
   background-color: black;
   color: white;
-  & .logo{
+  & .logo {
     height: 60px;
   }
-  & > span{
+  & > span {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

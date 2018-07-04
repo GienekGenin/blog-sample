@@ -9,6 +9,7 @@
 }
 
 .social {
+  display: flex;
   align-self: center;
   justify-self: center;
 }
@@ -40,5 +41,39 @@ header {
     text-decoration: none;
     text-align: center;
     color: #F8ECC2;
+  }
+}
+
+.menu-items-box {
+  display: grid;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto;
+  & input {
+    width: 150px;
+    height: 30px;
+  }
+  & button {
+    width: 30px;
+    height: 30px;
+    margin-left: -3px;
+    background-image: url('https://findicons.com/files/icons/2357/dortmund/32/search.png');
+    background-repeat: no-repeat;
+  }
+}
+
+.search-box {
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+@media only screen and (max-width: 780px) {
+  .menu-items{
+    display: none;
   }
 }
