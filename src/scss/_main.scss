@@ -7,6 +7,16 @@ main {
 }
 
 article {
+  & h3, & span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    &:hover {
+      overflow: visible;
+      white-space: normal;
+    }
+  }
   & > img {
     width: 100%;
     height: 50%;
@@ -19,19 +29,25 @@ article {
       transition: 1s;
     }
   }
-  & span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+
   max-width: 200px;
   min-width: 150px;
   margin: 10px;
   margin-bottom: 30px;
   & .reviews {
+    justify-items: flex-start;
+    & img {
+      margin-left: 3px;
+      align-self: center;
+      width: 15px;
+      height: 15px;
+    }
     display: grid;
     & .time {
       grid-column: 1 / span 2;
+    }
+    & .review-box {
+      display: flex;
     }
     & .reviews-comment, & .rating {
       grid-row: 2;
@@ -39,12 +55,6 @@ article {
     & .rating {
       display: flex;
       justify-content: start;
-      & img {
-        margin-left: 3px;
-        align-self: center;
-        width: 15px;
-        height: 15px;
-      }
     }
   }
 }
