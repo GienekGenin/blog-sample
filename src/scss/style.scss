@@ -10,6 +10,7 @@
 }
 
 html, body {
+  z-index: 0;
   font-family: Arial, sans-serif;
 }
 
@@ -203,31 +204,6 @@ footer {
   }
   .content {
     grid-template-columns: 100%;
-  }
-  header {
-    display: block;
-    & ul {
-      display: none;
-      padding-left: 0;
-    }
-    & li {
-      display: block;
-      text-align: center;
-      padding-left: 0;
-    }
-  }
-
-  .menu-trigger {
-    display: inline-block;
-  }
-
-  .logo {
-    display: inline-block;
-    height: 100px;
-  }
-
-  #hamburger {
-    height: 20px;
   }
 
   .social {
