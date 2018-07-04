@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Encode+Sans+Condensed);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -7,15 +10,24 @@ main {
 }
 
 article {
+  &:hover {
+    span, h3{
+      overflow: visible;
+      white-space: normal;
+    }
+  }
+  & .title {
+    font-family: 'Encode Sans Condensed', sans-serif;
+  }
+  & span{
+    font-family: 'Open Sans', sans-serif;
+  }
   & h3, & span {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
-    &:hover {
-      overflow: visible;
-      white-space: normal;
-    }
+
   }
   & > img {
     width: 100%;
