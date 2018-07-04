@@ -26,9 +26,11 @@ html, body {
 
 // main and aside tags
 .content {
+  max-width: 1200px;
   position: absolute;
   z-index: -1;
-  margin-top: 120px;
+  margin-top: 110px;
+  border: 3px solid black;
   display: grid;
   grid-template-columns: 80% 20%;
 }

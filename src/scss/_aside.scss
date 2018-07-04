@@ -106,3 +106,9 @@ aside {
     }
   }
 }
+
+@media only screen and (max-width: 780px) {
+  aside{
+    grid-column: 1;
+  }
+}
