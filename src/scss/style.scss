@@ -11,6 +11,7 @@
 
 html, body {
   font-family: Arial, sans-serif;
+  z-index: 0;
 }
 
 //content
@@ -202,18 +203,7 @@ footer {
   .content {
     grid-template-columns: 100%;
   }
-  header {
-    display: block;
-    & ul {
-      display: none;
-      padding-left: 0;
-    }
-    & li {
-      display: block;
-      text-align: center;
-      padding-left: 0;
-    }
-  }
+
 
   .menu-trigger {
     display: inline-block;

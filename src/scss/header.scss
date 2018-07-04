@@ -76,4 +76,41 @@ header {
   .menu-items{
     display: none;
   }
+
+  .menu-trigger{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .logo{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .search-hidden{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .menu-items-box{
+    grid-column: 1 / span 3;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: auto;
+    & ul {
+      display: none;
+      padding-left: 0;
+    }
+    & li {
+      display: block;
+      text-align: center;
+      padding-left: 0;
+    }
+  }
 }
