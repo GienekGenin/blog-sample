@@ -2,18 +2,20 @@
 
 aside {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: start;
   padding-top: 5px;
   padding-right: 10px;
   padding-left: 10px;
+  // user's profile photos
   & img {
     width: 70px;
     height: 70px;
     align-self: start;
     border-radius: 50px;
   }
-  display: flex;
-  flex-wrap: wrap;
-  align-self: start;
+  // subscribe block
   & input {
     width: 100%;
   }
@@ -23,6 +25,11 @@ aside {
     & input{
       margin-bottom: 5px;
     }
+  }
+  // user's names
+  & .name {
+    color: red;
+    font-family: fantasy;
   }
 }
 
@@ -34,11 +41,6 @@ aside {
     font-family: Bahnschrift;
     color: black;
   }
-}
-
-.name {
-  color: red;
-  font-family: fantasy;
 }
 
 .comment-box {
@@ -99,7 +101,7 @@ aside {
     font-family: inherit;
     padding-left: 5px;
     &:hover {
-      color: red;
+      color: $marvel-color;
       cursor: pointer;
       background-color: white;
       transition: 0.5s;
@@ -110,5 +112,16 @@ aside {
 @media only screen and (max-width: 780px) {
   aside{
     grid-column: 1;
+  }
+
+  // search box for comments
+  .search-comment-menu {
+    & input {
+      width: 90%;
+    }
+    & button {
+      width: 10%;
+      min-width: 30px;
+    }
   }
 }

@@ -1,14 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Encode+Sans+Condensed);
 @import "variables";
 
 header {
   position: relative;
   z-index: 1;
-  & .logo{
-    height: 110px;
-  }
   background-color: black;
   display: grid;
   grid-template-columns: auto auto;
+  // header marvel logo
+  & .logo {
+    height: 110px;
+  }
   & ul {
     margin: 0;
     display: flex;
@@ -19,9 +21,11 @@ header {
     align-self: center;
     padding-left: 5px;
     display: inline-block;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-size: 20px;
     :hover {
       text-decoration: underline;
-      color: aquamarine;
+      color: $marvel-color;
       transition: 1s;
     }
   }
@@ -50,7 +54,7 @@ header {
   display: grid;
 }
 
-// Social icons, input and button
+// Social icons, and search box: input and button
 .menu-items {
   display: grid;
   grid-template-columns: auto auto;
@@ -65,14 +69,13 @@ header {
     background-image: url('https://findicons.com/files/icons/2357/dortmund/32/search.png');
     background-repeat: no-repeat;
   }
-}
-
-// Search items container
-.search-box {
-  display: flex;
-  align-self: center;
-  justify-content: flex-end;
-  padding-right: 40px;
+  // Search items container
+  & .search-box {
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    padding-right: 40px;
+  }
 }
 
 @media only screen and (max-width: 780px) {
@@ -81,7 +84,7 @@ header {
     display: grid;
     grid-template-columns: auto auto auto;
     height: auto;
-    & .logo{
+    & .logo {
       display: flex;
       align-self: center;
       justify-self: center;
@@ -94,31 +97,32 @@ header {
       display: block;
       text-align: center;
       padding-left: 0;
-      &:hover{
+      :hover {
         background-color: $marvel-color;
+        color: wheat;
       }
     }
   }
 
   //center hamburger box
-  .menu-trigger{
+  .menu-trigger {
     display: flex;
     align-self: center;
     justify-content: center;
   }
 
   // ul will take place of 3 columns
-  .menu-items-box{
+  .menu-items-box {
     grid-column: 1 / span 3;
   }
 
   // hide unnecessary icons
-  .menu-items{
+  .menu-items {
     display: none;
   }
 
   // hidden search icon
-  .search-hidden{
+  .search-hidden {
     display: flex;
     align-self: center;
     justify-self: center;

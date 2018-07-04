@@ -2,6 +2,7 @@
 @import "header";
 @import "main";
 @import "aside";
+@import "footer";
 @import "variables";
 
 * {
@@ -50,46 +51,10 @@ button {
   }
 }
 
-// footer
-footer {
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-column: 1 / span 2;
-  background-color: black;
-  color: white;
-  & .logo {
-    height: 60px;
-  }
-  & > span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    align-self: center;
-    text-align: center;
-  }
-}
-
 @media only screen and (max-width: 780px) {
-  // search box for comments
-  .search-comment-menu {
-    & input {
-      width: 90%;
-    }
-    & button {
-      width: 10%;
-      min-width: 30px;
-    }
-  }
-
   //main content will take hole place
   //aside goes under main
   .content {
     grid-template-columns: 100%;
-  }
-
-  // hide social icons in footer
-  .social {
-    display: none;
   }
 }
