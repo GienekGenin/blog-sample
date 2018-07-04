@@ -1,5 +1,5 @@
 // Social icons
-.facebook, .google, .tweeter {
+.facebook, .google, .tweeter, .youtube, .instagram, .pinterest {
   background-image: url('http://www.pngmart.com/files/3/Social-Icons-PNG-Pic.png');
   background-repeat: no-repeat;
   background-size: 200px;
@@ -27,6 +27,18 @@
 // google icon
 .google {
   background-position: -46px -7px;
+}
+// youtube icon
+.youtube{
+  background-position: -141px -37px;
+}
+// instagram icon
+.instagram{
+  background-position: -159px -7px;
+}
+// pinterest icon
+.pinterest{
+  background-position: -84px -7px;
 }
 
 // search icon

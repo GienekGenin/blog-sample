@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Encode+Sans+Condensed);
 @import "variables";
 
 header {
@@ -19,9 +20,11 @@ header {
     align-self: center;
     padding-left: 5px;
     display: inline-block;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-size: 20px;
     :hover {
       text-decoration: underline;
-      color: aquamarine;
+      color: $marvel-color;
       transition: 1s;
     }
   }
