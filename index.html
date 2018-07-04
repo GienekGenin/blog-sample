@@ -20,12 +20,16 @@
     <!--<meta http-equiv="refresh" content="1">-->
 </head>
 <body>
-<div class="nav">
-    <label for="toggle">&#9776;</label>
-    <input type="checkbox" id="toggle"/>
-    <div class="logo"><img src="./src/assets/img/Marvel-Logo.png" alt=""></div>
-    <div class="menu-items">
-        <div class="social-search-box">
+<div class="container">
+    <header>
+        <div class="menu-trigger">
+            <a href="#"><img src="./src/assets/img/hamburger.png" alt="" id="hamburger"></a>
+        </div>
+        <img src="./src/assets/img/Marvel-Logo.png" alt="logo" class="logo">
+        <div class="search-hidden">
+
+        </div>
+        <div class="menu-items">
             <div class="social">
                 <div class="facebook">
 
@@ -45,25 +49,20 @@
                 <div class="tweeter">
 
                 </div>
+                <div class="search">
+
+                </div>
             </div>
-            <div class="search">
-                <input type="text" placeholder="search">
-                <button></button>
-            </div>
+            <ul>
+                <li><a href="#">Characters</a></li>
+                <li><a href="#">Comics</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">TV</a></li>
+            </ul>
         </div>
-        <div class="menu">
-            <a href="#">Video</a>
-            <a href="#">Comics</a>
-            <a href="#">Games</a>
-            <a href="#"><span>TV</span></a>
-            <a href="#">Video</a>
-            <a href="#">Comics</a>
-            <a href="#">Games</a>
-            <a href="#"><span>TV</span></a>
-        </div>
-    </div>
-</div>
-<div class="container">
+    </header>
     <div class="content">
         <main>
             <article>

@@ -10,7 +10,6 @@
 }
 
 html, body {
-  z-index: 0;
   font-family: Arial, sans-serif;
 }
 
@@ -117,6 +116,10 @@ aside {
   font-family: cursive;
 }
 
+.menu-items {
+  display: grid;
+}
+
 button {
   height: 30px;
   width: 100%;
@@ -174,7 +177,7 @@ footer {
   background-color: black;
   color: white;
   & .logo{
-    width: 200px;
+    height: 60px;
   }
   & > span{
     white-space: nowrap;
@@ -201,8 +204,33 @@ footer {
   .content {
     grid-template-columns: 100%;
   }
+  header {
+    display: block;
+    & ul {
+      display: none;
+      padding-left: 0;
+    }
+    & li {
+      display: block;
+      text-align: center;
+      padding-left: 0;
+    }
+  }
 
-  //.social {
-  //  display: none;
-  //}
+  .menu-trigger {
+    display: inline-block;
+  }
+
+  .logo {
+    display: inline-block;
+    height: 100px;
+  }
+
+  #hamburger {
+    height: 20px;
+  }
+
+  .social {
+    display: none;
+  }
 }

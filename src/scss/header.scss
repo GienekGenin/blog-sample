@@ -1,116 +1,44 @@
-.nav {
-  max-width: 1200px;
-  margin: auto;
-  background-color: grey;
-  border-bottom: 1px solid #EAEAEB;
-  text-align: right;
-  line-height: 100px;
+.menu-trigger {
+  text-align: center;
+  display: none;
+}
+
+.logo {
+  display: inline-block;
+  height: 110px;
+}
+
+.social {
+  align-self: center;
+  justify-self: center;
+}
+
+header {
+  width: 100%;
+  background-color: black;
   display: grid;
-  grid-template-rows: 100px;
-  grid-template-columns: 200px auto;
-  & span {
-    color: #54D17A;
-  }
-}
-
-.logo{
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  & img{
-    width: 200px;
-  }
-}
-
-.social,.search{
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-}
-
-.social-search-box {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-rows: 50px;
   grid-template-columns: auto auto;
-  align-items: center;
-}
-
-.search{
-  justify-content: flex-end;
-  padding-right: 10px;
-  & input{
-    width: 200px;
-    height: 30px;
+  & ul {
+    padding: 0;
+    margin: 0;
+    align-self: center;
+    text-align: center;
   }
-  & button {
-    width: 30px;
-    height: 30px;
-    background-color: wheat;
-    background-image: url('https://findicons.com/files/icons/2357/dortmund/32/search.png');
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-
-.menu {
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  & a {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &:hover {
-      background-color: red;
+  & li {
+    align-self: center;
+    padding-left: 5px;
+    display: inline-block;
+    :hover {
+      text-decoration: underline;
+      background-color: #F11E22;
+      color: aquamarine;
+      transition: 1s;
     }
   }
-}
-
-.menu-items {
-  display: grid;
-  grid-template-rows: 50px 50px;
-}
-
-label {
-  margin: 0 40px 0 0;
-  font-size: 26px;
-  line-height: 70px;
-  display: none;
-  width: 26px;
-  float: right;
-}
-
-#toggle {
-  display: none;
-}
-
-@media only screen and (max-width: 780px) {
-
-}
-
-/*
-  label {
+  & a {
     display: block;
-    cursor: pointer;
-  }
-  .menu {
+    text-decoration: none;
     text-align: center;
-    width: 100%;
-    display: none;
+    color: #F8ECC2;
   }
-  .menu a {
-    display: block;
-    border-bottom: 1px solid #EAEAEB;
-    margin: 0;
-
-  }
-  #toggle:checked + .menu {
-    display: block;
-  }
-*/
+}
