@@ -28,4 +28,23 @@ article {
   min-width: 150px;
   margin: 10px;
   margin-bottom: 30px;
+  & .reviews {
+    display: grid;
+    & .time {
+      grid-column: 1 / span 2;
+    }
+    & .reviews-comment, & .rating {
+      grid-row: 2;
+    }
+    & .rating {
+      display: flex;
+      justify-content: start;
+      & img {
+        margin-left: 3px;
+        align-self: center;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
 }
