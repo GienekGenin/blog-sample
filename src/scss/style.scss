@@ -26,6 +26,9 @@ html, body {
 
 // main and aside tags
 .content {
+  position: absolute;
+  z-index: -1;
+  margin-top: 120px;
   display: grid;
   grid-template-columns: 80% 20%;
 }
@@ -50,6 +53,7 @@ footer {
   width: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
+  grid-column: 1 / span 2;
   background-color: black;
   color: white;
   & .logo {

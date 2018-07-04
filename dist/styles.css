@@ -3,7 +3,6 @@
   background-repeat: no-repeat;
   background-size: 200px;
   justify-self: center;
-  margin: 10px;
   height: 31px;
   width: 31px;
   display: inline-block; }
@@ -28,8 +27,7 @@
   align-self: center;
   justify-self: center;
   height: 32px;
-  width: 32px;
-  grid-area: 1/4; }
+  width: 32px; }
   .search:hover {
     transform: rotate(360deg);
     transition: 1s;
@@ -46,35 +44,25 @@
     transition: 1s;
     cursor: pointer; }
 
-.menu-trigger {
-  text-align: center;
-  display: none; }
-
-.logo {
-  display: inline-block;
-  height: 110px; }
-
-.social {
-  align-self: center;
-  justify-self: center; }
-
 header {
-  width: 100%;
+  position: relative;
+  z-index: 1;
   background-color: black;
   display: grid;
   grid-template-columns: auto auto; }
+  header .logo {
+    height: 110px; }
   header ul {
-    padding: 0;
     margin: 0;
-    align-self: center;
-    text-align: center; }
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px; }
   header li {
     align-self: center;
     padding-left: 5px;
     display: inline-block; }
     header li :hover {
       text-decoration: underline;
-      background-color: #F11E22;
       color: aquamarine;
       transition: 1s; }
   header a {
@@ -83,24 +71,68 @@ header {
     text-align: center;
     color: #F8ECC2; }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
+.menu-trigger {
+  display: none; }
 
-html, body {
-  font-family: Arial, sans-serif; }
+.social {
+  display: flex;
+  align-self: center;
+  justify-content: space-around; }
 
-.container {
-  padding: 0;
-  margin: auto;
-  max-width: 1200px;
+.menu-items-box {
+  display: grid; }
+
+.menu-items {
   display: grid;
-  grid-template-rows: auto auto auto; }
+  grid-template-columns: auto auto; }
+  .menu-items input {
+    width: 150px;
+    height: 30px; }
+  .menu-items button {
+    width: 30px;
+    height: 30px;
+    margin-left: -3px;
+    background-image: url("https://findicons.com/files/icons/2357/dortmund/32/search.png");
+    background-repeat: no-repeat; }
 
-.content {
-  display: grid;
-  grid-template-columns: 80% 20%; }
+.search-box {
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+  padding-right: 10px; }
+
+@media only screen and (max-width: 780px) {
+  header {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: auto; }
+    header .logo {
+      display: flex;
+      align-self: center;
+      justify-self: center; }
+    header ul {
+      display: none;
+      margin-right: 0; }
+    header li {
+      display: block;
+      text-align: center;
+      padding-left: 0; }
+      header li:hover {
+        background-color: #F11E22; }
+  .menu-trigger {
+    display: flex;
+    align-self: center;
+    justify-content: center; }
+  .menu-items-box {
+    grid-column: 1 / span 3; }
+  .menu-items {
+    display: none; }
+  .search-hidden {
+    display: flex;
+    align-self: center;
+    justify-self: center; }
+  #hamburger {
+    height: 35px; } }
 
 main {
   display: flex;
@@ -112,9 +144,19 @@ main {
 article {
   max-width: 200px;
   min-width: 150px;
-  margin: 10px; }
+  margin: 10px;
+  margin-bottom: 30px; }
+  article h3, article span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block; }
+    article h3:hover, article span:hover {
+      overflow: visible;
+      white-space: normal; }
   article > img {
-    width: 150px; }
+    width: 100%;
+    height: 50%; }
     article > img:hover {
       -webkit-transform: scale(1.5);
       /* Safari and Chrome */
@@ -126,14 +168,29 @@ article {
       /* Opera */
       transform: scale(1.5);
       transition: 1s; }
-  article span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; }
+  article .reviews {
+    justify-items: flex-start;
+    display: grid; }
+    article .reviews img {
+      margin-left: 3px;
+      align-self: center;
+      width: 15px;
+      height: 15px; }
+    article .reviews .time {
+      grid-column: 1 / span 2; }
+    article .reviews .review-box {
+      display: flex; }
+    article .reviews .reviews-comment, article .reviews .rating {
+      grid-row: 2; }
+    article .reviews .rating {
+      display: flex;
+      justify-content: start; }
 
 aside {
   width: 100%;
   padding-top: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
   display: flex;
   flex-wrap: wrap;
   align-self: start; }
@@ -144,10 +201,11 @@ aside {
     border-radius: 50px; }
   aside input {
     width: 100%; }
-
-.name {
-  color: red;
-  font-family: fantasy; }
+  aside .subscribe {
+    width: 100%;
+    margin-top: 5px; }
+    aside .subscribe input {
+      margin-bottom: 5px; }
 
 #author {
   display: grid;
@@ -156,49 +214,34 @@ aside {
     font-family: Bahnschrift;
     color: black; }
 
-.subscribe {
-  width: 100%; }
+.name {
+  color: red;
+  font-family: fantasy; }
 
-.info {
-  display: grid;
-  padding-left: 10px; }
-  .info span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; }
-
-.comments {
+.comment-box {
   width: 100%;
-  display: grid; }
-
-.comment-body {
   display: grid;
-  grid-template-columns: 70px 1fr; }
+  margin-top: 15px; }
+  .comment-box .comment-body {
+    display: grid;
+    grid-template-columns: 70px 1fr; }
+    .comment-box .comment-body .info {
+      display: grid;
+      padding-left: 10px; }
+      .comment-box .comment-body .info .comment {
+        font-family: cursive; }
+      .comment-box .comment-body .info span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
 
-.comment {
-  font-family: cursive; }
-
-.menu-items {
-  display: grid; }
-
-button {
-  height: 30px;
-  width: 100%;
-  background-color: #F11E22;
-  border-radius: 5px;
-  border: none; }
-  button:hover {
-    cursor: pointer;
-    background-color: red;
-    transition: 1s; }
-
-.search-comment {
+.search-comment-menu {
   padding-top: 5px;
   width: 100%;
   display: flex; }
-  .search-comment input {
+  .search-comment-menu input {
     width: 80%; }
-  .search-comment button {
+  .search-comment-menu button {
     width: 20%;
     background-color: wheat;
     background-image: url("https://findicons.com/files/icons/2357/dortmund/32/search.png");
@@ -207,24 +250,64 @@ button {
     background-size: 28px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0; }
-    .search-comment button:hover {
+    .search-comment-menu button:hover {
       background-color: #F11E22; }
 
 .tags {
   width: 100%; }
   .tags > span {
-    color: darkslateblue;
+    background-color: wheat;
+    font-weight: bold;
+    color: black;
+    border-radius: 5px;
     font-family: inherit;
     padding-left: 5px; }
     .tags > span:hover {
       color: red;
       cursor: pointer;
-      transition: 1s; }
+      background-color: white;
+      transition: 0.5s; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  font-family: Arial, sans-serif;
+  z-index: 0; }
+
+.container {
+  padding: 0;
+  margin: auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-rows: auto auto auto; }
+
+.content {
+  position: absolute;
+  z-index: -1;
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 80% 20%; }
+
+button {
+  height: 30px;
+  width: 100%;
+  color: wheat;
+  background-color: #F11E22;
+  border-radius: 5px;
+  border: none; }
+  button:hover {
+    cursor: pointer;
+    background-color: red;
+    transition: 1s; }
 
 footer {
   width: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
+  grid-column: 1 / span 2;
   background-color: black;
   color: white; }
   footer .logo {
@@ -237,30 +320,12 @@ footer {
     text-align: center; }
 
 @media only screen and (max-width: 780px) {
-  .search-comment input {
+  .search-comment-menu input {
     width: 90%; }
-  .search-comment button {
+  .search-comment-menu button {
     width: 10%;
     min-width: 30px; }
-  .search-hidden {
-    display: inline-block; }
   .content {
     grid-template-columns: 100%; }
-  header {
-    display: block; }
-    header ul {
-      display: none;
-      padding-left: 0; }
-    header li {
-      display: block;
-      text-align: center;
-      padding-left: 0; }
-  .menu-trigger {
-    display: inline-block; }
-  .logo {
-    display: inline-block;
-    height: 100px; }
-  #hamburger {
-    height: 20px; }
   .social {
     display: none; } }
