@@ -97,8 +97,9 @@ header {
       display: block;
       text-align: center;
       padding-left: 0;
-      &:hover {
+      :hover {
         background-color: $marvel-color;
+        color: wheat;
       }
     }
   }
