@@ -44,6 +44,7 @@ aside {
 .comment-box {
   width: 100%;
   display: grid;
+  margin-top: 15px;
   & .comment-body {
     display: grid;
     grid-template-columns: 70px 1fr;
@@ -91,13 +92,17 @@ aside {
 .tags {
   width: 100%;
   & > span {
-    color: darkslateblue;
+    background-color: wheat;
+    font-weight: bold;
+    color: black;
+    border-radius: 5px;
     font-family: inherit;
     padding-left: 5px;
     &:hover {
       color: red;
       cursor: pointer;
-      transition: 1s;
+      background-color: white;
+      transition: 0.5s;
     }
   }
 }
